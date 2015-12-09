@@ -1,0 +1,17 @@
+todo:
+	HouseEntity, HouseDB 와 HouseNpc 연결고리 만들기.
+	HouseEntity.AsyncSpawn 을 하는가?
+	아니면 HouseDB.AsyncSpawn 을 하는가?
+	HouseNpc 는 HouseEntity 와는 약한 연결고리만 가지는가?
+		-> auto houseNpc = HouseNpcDB.GetHouseNpc(nHouseDBID);
+			houseNpc.Spawn() 등
+
+	어렵군.
+	
+	* HouseNpc 는 일단 Npc 이므로, HouseEntity 와는 서로 weak reference 만 가지는 것이 옳아 보임.
+	* 하나의 HouseEntity 에 대한 여러 HouseNpc 연결도 가능해 보임.
+		각 HouseNpc 의 개별 속성: 
+			* 위치
+			* 외형
+			* HP???? 파괴상태????
+			 
